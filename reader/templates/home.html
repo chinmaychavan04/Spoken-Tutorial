@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable = no">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static  'img/logo.png' %}" type="image/png">
+    <title>AudioCity | Home</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{%static 'css/home.css'%}">
+</head>
+
+<body>
+
+    <div class="container1" id="homeNav">
+        {% include 'navbar.html' %}
+        <video loop muted src="{% static 'img/video.mp4' %}" autoplay></video>
+        <div class="content">
+            <div class="team-area">
+                <div class="single-team">
+                    <img src="{% static 'img/tape.gif' %}" alt="">
+                    <div class="team-text">
+                        <h2>Text-To-Speech</h2>
+                        <a href="{% url 'textIp' %}"> Click Here</a>
+                    </div>
+                </div>
+                <div class="single-team">
+                    <img src="{% static 'img/videogif.gif' %}" alt="">
+                    <div class="team-text">
+                        <h2>Video Generator</h2>
+                        <a href="{% url 'videoIp' %}"> Click Here</a>
+
+                    </div>
+                </div>
+                <div class="single-team">
+                    <img src="{% static 'img/Frame4.png' %}" alt="">
+                    <div class="team-text">
+                        <h2>PDF-To-Speech</h2>
+                        <a href="{% url 'pdfIp' %}"> Click Here</a>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
